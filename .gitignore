@@ -1,0 +1,16 @@
+.DS_Store
+hello-*/node_modules/
+hello-*/dist/
+hello-*/npm-debug.log*
+hello-*/yarn-debug.log*
+hello-*/yarn-error.log*
+hello-*//test/e2e/reports/
+hello-*/selenium-debug.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
