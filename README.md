@@ -1,5 +1,7 @@
 
-### webpack打包vue
+# webpack + vue 工程配置
+
+## vue-loader
 
 webpack的作用就是将所用到的静态资源，全部打包在一起，减少HTTP请求数。
 
@@ -93,7 +95,7 @@ npm run build
 
 ---
 
-### 样式处理
+## 样式处理
 
 1. 安装预处理器stylus
 ```
@@ -130,7 +132,7 @@ import './assets/styles/test.stylus.styl'
 
 ---
 
-### webpack dev server
+## webpack dev server
 
 1. 安装 webpack-dev-server
 ```
