@@ -206,3 +206,48 @@ npm i html-webpack-plugin
 // 在页面中调试代码，通过source-map进行代码映射
   config.devtool = '#cheap-module-eval-source-map'
 ```
+
+---
+
+# 二、Vue
+
+ - Vue是一个数据绑定的框架
+ - vue文件的开发方式
+ - render方法，对虚拟dom的渲染
+
+Vue的生命周期方法，比如当一个组件在挂载到dom之前，想一个接口请求数据。
+
+computed，Vue是一个reactive响应式框架，响应的值可以通过依赖计算。
+
+## 样式
+
+1. 安装其他依赖
+```
+npm i postcss-loader autoprefixer babel-loader babel-core babel-preset-env babel-plugin-transform-vue-jsx babel-helper-vue-jsx-merge-props
+```
+
+2. 使用postcss后处理css，stylus编译为css后，使用一系列组件优化css，其中一个是autoprefixer（-webkit等等）
+```
+// postcss.config.js
+const autoprefixer = require('autoprefixer')
+
+module.exports = {
+  plugins: [
+    autoprefixer()
+  ]
+}
+```
+
+3. babel可以支持Vue写jsx代码，同时需要一个转换插件
+```
+
+// .babel
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    "transform-vue-jsx"
+  ]
+}
+```

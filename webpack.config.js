@@ -23,7 +23,11 @@ const config = {
         test: /\.vue$/,
         loader: 'vue-loader'
       },
-// 将css卸载html中
+      {
+        test: /\.jsx$/,
+        loader: 'babel-loader'
+      },
+// 将css写在html中
       {
         test: /\.css$/,
         use: [
@@ -50,6 +54,12 @@ const config = {
         use: [
           'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
           'stylus-loader'
         ]
       }
